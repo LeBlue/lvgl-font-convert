@@ -1,0 +1,35 @@
+format: "lvgl"
+bbp: 4
+sizes: [ 16, 24 ]
+# options from lvgl default set
+force_fast_kern_format: true
+no_compress: true
+no_prefilter: true
+# how outout will be called
+name: "FontAwesome Solid"
+fonts:
+  # can add multpile here, ranges/symbols must not overlap, or remapped with =>0x...
+  - source_path: "fonts/FontAwesome5-Solid+Brands+Regular.woff"
+    symbols: ""
+    ranges: []
+    named:
+      audio:           "0xF001"
+      video:           "0xF008"
+      list:            "0xF00B"
+      ok:              "0xF00C"
+      close:           "0xF00D"
+      power:           "0xF011"
+      settings:        "0xF013"
+  - source_path: "fonts/fa-solid-900.ttf"
+    symbols: ""
+    ranges: []
+    # can also use rename syntax (0x...=>0x...), but no ranges
+    named:
+      slider: "0xf1de"
+
+
+# add names to generate #defines for utf-8 code point
+defines:
+  # how header will be called
+  header: "FontAwesome Symbols"
+  prefix: "fa_symbol"

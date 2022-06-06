@@ -1,0 +1,91 @@
+# default config of lvgl fonts
+format: "lvgl"
+bbp: 4
+sizes: [ 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48 ]
+# sizes: [ 16, 24 ]
+force_fast_kern_format: true
+no_compress: true
+no_prefilter: true
+# how outout will be called
+name: "Montserrat"
+fonts:
+  # can add multpile here, ranges/symbols must not overlap, or remapped with =>0x...
+  - source_path: "fonts/Montserrat-Medium.ttf"
+    symbols: ""
+    ranges:
+      # ascii
+      - "0x20-0x7f"
+      - "0xB0"
+      - "0x2022"
+  - source_path: "fonts/FontAwesome5-Solid+Brands+Regular.woff"
+    symbols: ""
+    ranges: []
+    named:
+      audio:           "0xF001"
+      video:           "0xF008"
+      list:            "0xF00B"
+      ok:              "0xF00C"
+      close:           "0xF00D"
+      power:           "0xF011"
+      settings:        "0xF013"
+      home:            "0xF015"
+      download:        "0xF019"
+      drive:           "0xF01C"
+      refresh:         "0xF021"
+      mute:            "0xF026"
+      volume_mid:      "0xF027"
+      volume_max:      "0xF028"
+      image:           "0xF03E"
+      tint:            "0xF043"
+      prev:            "0xF048"
+      play:            "0xF04B"
+      pause:           "0xF04C"
+      stop:            "0xF04D"
+      next:            "0xF051"
+      eject:           "0xF052"
+      left:            "0xF053"
+      right:           "0xF054"
+      plus:            "0xF067"
+      minus:           "0xF068"
+      eye_open:        "0xF06E"
+      eye_close:       "0xF070"
+      warning:         "0xF071"
+      shuffle:         "0xF074"
+      up:              "0xF077"
+      down:            "0xF078"
+      loop:            "0xF079"
+      directory:       "0xF07B"
+      upload:          "0xF093"
+      call:            "0xF095"
+      cut:             "0xF0C4"
+      copy:            "0xF0C5"
+      save:            "0xF0C7"
+      bars:            "0xF0C9"
+      envelope:        "0xF0E0"
+      charge:          "0xF0E7"
+      paste:           "0xF0EA"
+      bell:            "0xF0F3"
+      keyboard:        "0xF11C"
+      gps:             "0xF124"
+      file:            "0xF158"
+      wifi:            "0xF1EB"
+      battery_full:    "0xF240"
+      battery_3:       "0xF241"
+      battery_2:       "0xF242"
+      battery_1:       "0xF243"
+      battery_empty:   "0xF244"
+      usb:             "0xF287"
+      bluetooth:       "0xF293"
+      trash:           "0xF2ED"
+      edit:            "0xF304"
+      backspace:       "0xF55A"
+      sd_card:         "0xF7C2"
+      new_line:        "0xF8A2"
+      # end lvgl defaults
+
+
+# add names to generate #defines for utf-8 code point
+defines:
+  # how header will be called
+  header: "lv_symbols_def.h"
+  prefix: "lv_symbol"
