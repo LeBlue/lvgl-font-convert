@@ -43,3 +43,7 @@ node lvgl-font-converter --config config.yaml --output some/path
 
 In the root of this sources run `npm install`.
 
+## LICENSE fonts
+
+For the license of the included fonts, see the `fonts/LICENSE.fontawesome.txt`
+
